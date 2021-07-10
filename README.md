@@ -1,5 +1,6 @@
 # lib
-just library  with django
+just library  with django 
+# To run the project follow the steps
 step1 install virtul environment   
 step2 run env 
 step3 copy project in your directory  
