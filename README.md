@@ -15,7 +15,7 @@ admin/
 user = admin  
 pass = 1234 
 
-for using APIs just login and go to this urls 
+for using APIs just login and go to this urls   
 book = api/book/  
 publisher = api/publisher/  
 author = api/author/  
