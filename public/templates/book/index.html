@@ -1,0 +1,69 @@
+
+{% extends 'parent/main.html' %}
+
+
+
+    {% block title %}
+        {{block.super}} کتابخانه 
+    {% endblock  %}
+{% block body %}
+
+<div class="container">
+
+    <br><hr>
+        <div class="row">
+            
+        {% if book_list %}
+                {% for book in book_list %}
+                    <div class="card col-sm-4 " >
+                        <img class="img card-img-top" src="{{book.img.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{% url 'bookDetail' book.id %} " class="link-info">{{book.title}}</a
+                            ></h5>
+                            <p class="card-text">{{book.summary}}</p>
+                            <a href="{% url 'bookDetail' book.id %}" class="btn btn-primary">خرید</a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% include 'partials/pagination.html' %}
+                
+        
+        {% else %} 
+            <h1 class="deanger">کتابی نیست</h1>
+        {% endif %}   
+        </div>
+        
+
+
+    <br><hr>
+    <div class="row">
+        <table class = "table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    نام کتاب
+                </th>
+                <th>
+                    خلاصه    
+                </th>
+            </tr>
+        </thead>
+            {% for b in my_book_list %}
+                <tr ="row">
+                    <td>
+                        {{b.title}}
+                    </td>
+                    <td>
+                        {{b.summary}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+
+{% endblock %}
