@@ -5,7 +5,7 @@ step2 run env
 step3 copy project in your directory  
 step4 use (pip install -r requirements.txt) for instaling dependencies  
 
-# hints  
+# Hints  
 admin/  
 user = admin  
 pass = 1234 
