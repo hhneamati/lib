@@ -1,5 +1,5 @@
 # lib
-just library  
+just library  with django
 step1 install virtul environment   
 step2 run env 
 step3 copy project in your directory  
